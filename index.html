@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Clínica Dental</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#f4f4f4;
+margin:0;
+}
+
+header{
+background:#2a7ae2;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+.container{
+width:60%;
+margin:auto;
+margin-top:40px;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+}
+
+input, select{
+width:100%;
+padding:10px;
+margin-top:10px;
+margin-bottom:20px;
+}
+
+button{
+background:#2a7ae2;
+color:white;
+border:none;
+padding:12px;
+width:100%;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1e5fb5;
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+<h1>Clínica Dental Sonrisa</h1>
+<p>Agenda tu cita dental en línea</p>
+</header>
+
+<div class="container">
+
+<h2>Reservar Cita</h2>
+
+<form action="guardar_cita.php" method="POST">
+
+<label>Nombre del paciente</label>
+<input type="text" name="nombre" required>
+
+<label>Teléfono</label>
+<input type="text" name="telefono" required>
+
+<label>Fecha de la cita</label>
+<input type="date" name="fecha" required>
+
+<label>Hora</label>
+<input type="time" name="hora" required>
+
+<label>Tipo de consulta</label>
+<select name="consulta">
+<option>Limpieza dental</option>
+<option>Revisión</option>
+<option>Ortodoncia</option>
+<option>Blanqueamiento</option>
+</select>
+
+<button type="submit">Reservar Cita</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
